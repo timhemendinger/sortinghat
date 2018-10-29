@@ -1,0 +1,22 @@
+html, body {
+    background-color: #000;
+    height: 100%;
+}
+
+.container-fluid {
+    height: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    /* background-image: url("img/hogwarts.gif");
+    background-repeat:no-repeat;
+background-size:contain;
+background-position:center; */
+}
+
+.-padding-top-50 {
+    padding-top: 50px !important;
+}
+
+* {
+    color: #fff;
+}
