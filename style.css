@@ -3,20 +3,32 @@ html, body {
     height: 100%;
 }
 
-.hufflepuff {
-    background-color: #fbb72c;
+.house-result {
+    display: none;
 }
 
-.gryffindor {
-    background-color: #d74f3f;
+.gryffindor-bg { background-color: #d74f3f; }
+.hufflepuff-bg { background-color: #fbb72c; }
+.ravenclaw-bg { background-color: #22326a; }
+.slytherin-bg { background-color: #005d4b; }
+.gryffindor-text { color: #d74f3f; }
+.hufflepuff-text { color: #fbb72c; }
+.ravenclaw-text { color: #22326a; }
+.slytherin-text { color: #005d4b; }
+
+.house-header {
+    background-color: #fff;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.slytherin {
-    background-color: #005d4b;
-}
-
-.ravenclaw {
-    background-color: #22326a;
+.house-body {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
 }
 
 .container-fluid {
