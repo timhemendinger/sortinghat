@@ -1,5 +1,7 @@
 $(function() {
 
+    playAudio('audio/hp-theme.mp3', true);
+
     var randomNum = 0;
     var house = '';
 
@@ -33,4 +35,14 @@ function getHouse(randomNum) {
 
 function genRandomInt(max) {
     return Math.floor(Math.random() * Math.floor(max));
+}
+
+function playAudio (audioPath, loop) {
+    if (audio) {
+        audio.stop();
+    }
+    
+    var audio = new Audio(audioPath);
+    audio.loop = loop;
+    audio.play();
 }
