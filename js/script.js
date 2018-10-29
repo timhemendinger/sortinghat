@@ -9,42 +9,71 @@ $(function() {
 
     $('#getHouseBtn').on('click', () => {
         $('.intro-screen').fadeOut('slow', () => {
-            $('.house-result').fadeIn('slow');
+            //$('.house-result').fadeIn('slow');
+            $('.loading-screen').fadeIn('fast');
         });
 
-        randomNum = genRandomInt(4);
+        //randomNum = genRandomInt(4);
+        randomNum = 0;
         house = getHouse(randomNum);
 
+    });
+
+    $('#back').on('click', (e) => {
+        $('.house-result').fadeOut('slow', () => {
+            $('.intro-screen').fadeIn('slow');
+            houseScreenReset();
+        });
+        
+        e.preventDefault();
     });
     
 });
 
-function generateHouse(house) {
-    
-    capitalizedName = house.charAt(0).toUpperCase() + house.slice(1);
+// pauseTime is to ensure the audio is synched
+function generateHouse(house, pauseTime) {
 
-    $('.g-text').text(capitalizedName);
-    $('#' + house).show();
-    $('.house-header').addClass(house + '-text');
-    $('.house-body').addClass(house + '-bg');
+    pauseTime *= 1000;
+    playAudio('audio/' + house + '.mp3');
+
+    setTimeout(() => {
+        capitalizedName = house.charAt(0).toUpperCase() + house.slice(1);
+        $('.g-text').text(capitalizedName);
+        $('#' + house).show();
+        $('.house-header').addClass(house + '-text');
+        $('.house-body').addClass(house + '-bg');
+
+        $('.loading-screen').fadeOut('slow', () => {
+            $('.house-result').fadeIn('slow');
+        });
+
+        
+    }, pauseTime);
+
+}
+
+function houseScreenReset() {
+    $('.g-text').text();
+    $('.crest-image').hide();
+    $('.house-body').attr('class', 'house-body');
 }
 
 function getHouse(randomNum) {
     switch (randomNum) {
         case 0:
-            generateHouse('gryffindor');
+            generateHouse('gryffindor', 19);
             break;
 
         case 1:
-            generateHouse('hufflepuff');
+            generateHouse('hufflepuff', 17);
             break;
 
         case 2:
-            generateHouse('ravenclaw');
+            generateHouse('ravenclaw', 22);
             break;
 
         case 3:
-            generateHouse('slytherin');
+            generateHouse('slytherin', 19);
             break;
     }
 }

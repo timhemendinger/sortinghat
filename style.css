@@ -3,7 +3,9 @@ html, body {
     height: 100%;
 }
 
-.house-result {
+/* .loading-screen */
+
+.house-result, .intro-screen  {
     display: none;
 }
 
