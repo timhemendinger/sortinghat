@@ -13,8 +13,7 @@ $(function() {
             $('.loading-screen').fadeIn('fast');
         });
 
-        //randomNum = genRandomInt(4);
-        randomNum = 0;
+        randomNum = genRandomInt(4);
         house = getHouse(randomNum);
 
     });
