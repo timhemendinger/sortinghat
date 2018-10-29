@@ -1,5 +1,5 @@
 html, body {
-    background-color: #000;
+    background-color: #282828;
     height: 100%;
     overflow: hidden;
 }
@@ -10,6 +10,27 @@ html, body {
 
 .house-result, .loading-screen {
     padding: 0 !important;
+}
+
+.intro-screen img {
+    max-size: 100%;
+}
+
+#getHouseBtn {
+    width: 100%; 
+    height: 65px; 
+    text-align: center; 
+    color: #fff; 
+    position:absolute;bottom:0;
+    background-color: #184c27; 
+    display: flex; 
+    align-items: center; 
+    font-size: 20px; 
+    justify-content: center;
+    cursor: pointer;
+    font-size: 22px;
+    letter-spacing: 1.2px;
+    font-family: serif;
 }
 
 .gryffindor-bg { background-color: #d74f3f; }

@@ -8,6 +8,7 @@ $(function() {
     var house = '';
 
     $('#getHouseBtn').on('click', () => {
+        $('#getHouseBtn').fadeOut('slow');
         $('.intro-screen').fadeOut('slow', () => {
             //$('.house-result').fadeIn('slow');
             $('.loading-screen').fadeIn('fast');
@@ -21,6 +22,7 @@ $(function() {
     $('#back').on('click', (e) => {
         $('.house-result').fadeOut('slow', () => {
             $('.intro-screen').fadeIn('slow');
+            $('#getHouseBtn').fadeIn('slow');
             houseScreenReset();
         });
         

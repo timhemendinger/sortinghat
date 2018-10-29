@@ -7,6 +7,8 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=EB+Garamond|Playfair+Display" rel="stylesheet">
+
 </head>
  
 <body>
@@ -14,13 +16,19 @@
     <div class="container-fluid intro-screen" style="padding-top: 50px;">
     
         <div class="row-fluid">
-            <div class="span12">
-                <h2>Welcome to The Sorting Hat</h2>
-
-
-                <p><button class="btn btn-large btn-primary" id="getHouseBtn" type="button">Find My House</button></p>
+            <div class="span12" style="text-align: center;">
+                <img src="img/sorting-hat.png">
+                <img src="img/hogwarts.png" alt="">
+<!-- 
+                <p><button class="btn btn-large btn-primary" id="getHouseBtn" type="button">Find My House</button></p> -->
             </div>
         </div>
+
+        
+    </div>
+
+    <div id="getHouseBtn">
+        Get My House
     </div>
 
     <div class="container-fluid loading-screen" style="padding-top: 50px;">
@@ -41,8 +49,7 @@
                 </div>
                 
                 <div class="house-body g-bg">
-                    <div class="crest">
-                        <a href="hi" id="back">hi</a>
+                    <div class="crest" id="back">
                         <img src="img/gryffindor.png" class="crest-image" id="gryffindor">
                         <img src="img/hufflepuff.png" class="crest-image" id="hufflepuff">
                         <img src="img/ravenclaw.png" class="crest-image" id="ravenclaw">
